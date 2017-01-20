@@ -89,7 +89,63 @@ function chestnum(){
     }
 
     //assigning the chest number
-    mysqli_query($conn, $q);
+    $res = mysqli_query($conn, $q);
+
+    //sending email
+
+    $dupnameerror=1062;
+
+    if($res){
+
+      require("PHPMailerAutoload.php");
+
+      $mail = new PHPMailer();
+
+      $mail->IsSMTP();                                      // set mailer to use SMTP
+      $mail->Host = "smtp.sendgrid.net";  // specify main and backup server
+      $mail->SMTPAuth = true;     // turn on SMTP authentication
+      $mail->Username = "Darkwolf";  // SMTP username
+      $mail->Password = "vasudev123"; // SMTP password
+
+      $mail->From = "from@example.com";
+      $mail->FromName = "Mailer";
+      $mail->AddAddress($mail12, $user1);
+      $mail->AddAddress("ellen@example.com");                  // name is optional
+      $mail->AddReplyTo("info@example.com", "Information");
+
+      $mail->WordWrap = 50;                                 // set word wrap to 50 characters
+      //$mail->AddAttachment("/var/tmp/file.tar.gz");         // add attachments
+      //$mail->AddAttachment("/tmp/image.jpg", "new.jpg");    // optional name
+      $mail->IsHTML(true);                                  // set email format to HTML
+
+      $mail->Subject = "Here is the subject";
+      $mail->Body    = "This is your chest number:</b>".$max;
+      $mail->AltBody = "This is the body in plain text for non-HTML mail clients";
+
+      if(!$mail->Send())
+      {
+         echo "Message could not be sent. <p>";
+         echo "Mailer Error: " . $mail->ErrorInfo;
+         exit;
+      }
+
+      echo "Message has been sent";
+
+      	}
+
+
+      	// could not insert
+      	else {
+      		if (mysqli_errno($conn) == $dupnameerror)
+      		{
+      			print 'User already exists';
+      		}
+      		else
+      		{
+      			//echo "User could not be added to the database. Reason: " . mysql_error();
+      			echo "Something went wrong";
+      		}
+    }
 
   }
 }
