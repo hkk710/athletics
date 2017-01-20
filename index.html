@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title> Athletic Meet Registration </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+            #event_table tr td{
+               text-transform: capitalize;
+            }
+            .box_dept ul{
+             display: none;
+            }
+            .box_dept{
+            cursor: pointer;
+            }
+            .list-group-item{
+            color:#4f4f4f;
+            }
+            #mark1 {
+
+				color : black;
+			    font-size : 25px;
+			}
+      #regnow {
+        height: 50px;
+        width: 250px;
+        background-color: #BD4E0F;
+        margin: 0 auto;
+        font-family:  helvetica;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        vertical-align: middle;
+        transition: background-color 0.5s, transform 0.2s;
+      }
+      #regnow p{
+        line-height: 50px;
+      }
+      #regnow:hover {        background-color: #274a9c;        transform: scale(1.2);      }
+        </style>
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script>
+		function cricAlert()	{
+			alert("Kavitha Miss (P E Dept)\nMob: 9995097178 ");
+		}
+
+	</script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="navbar" style="background-color:black" >
+      <div class="container">
+        <div class="navbar-collapse collapse">
+          <a class="pull-left" href="index.html"><img src="img/header.png" alt="Home" class="logo"></a>
+          <ul class="nav nav-pills pull-right">          <li role="presentation"><a href="registration.html"><font color="#acd200">Register Now</font></a></li>
+          <li role="presentation"><a href="#events"><font color="#acd200">Events</font></a></li>
+<li role="presentation"><a href="crickview.php"><font color="#acd200">Cricket Teams</font></a></li>
+<li role="presentation"><a href="admin2.php"><font color="#acd200">Registrations</font></a></li>
+<!-- <li role="presentation"><a href="admin3.php"><font color="#acd200">Quiz Participants</font></a></li>
+<!-- <li role="presentation"><a href="#quiz"><font
+color="#acd200">Quiz Registration</font></a></li> -->
+<li role="presentation"><a href="#crick"><font
+color="#acd200">SuperOver Registration</font></a></li>
+          <li role="presentation"><a href="#rules_section"><font color="#acd200">Rules</font></a></li>
+        <!--  <li role="presentation"><a href="result.php"><font color="#acd200">Deparment Results</font></a></li> --><!--
+	< <li role="presentation"><a href="announce.html"><font color="#acd200">Announcement Desk</font></a></li>
+
+	<!--  <li role="presentation"><a href="result_f.php"><font color="#acd200">Female Champions</font></a></li>
+	  <li role="presentation"><a href="result_m.php"><font color="#acd200">Male Champions</font></a></li> -->
+     <!--   <li role="presentation"><a href="#">Contact</a></li> -->
+	<!--	<li role="presentation"><a href="registration.html"><font color="#acd200">Register Now</font></a></li> -->
+           <li role="presentation"  onclick = "cricAlert()"><a href="#"><font color="#acd200">Contact</font></a></li>
+            </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+<!--
+<marquee behavior="alternate"><p id="mark1">ALL REGISTRATIONS HAVE BEEN CLOSED </p> </marquee>-->
+
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" id="featured">
+      <div class="container">
+       <P class="text-center"><img src="img/logo_full.png" alt="logo"></p>
+         <div id="regnow">
+           <a href="registration.html" style="color:white;text-decoration:none"><p>REGISTER NOW</p></a>
+         </div>
+
+        <h1 class="text-center">Annual Athletic meet 2016-17</h1>
+        <h2 class="text-center"><span class="glyphicon glyphicon-calendar"></span>27th, 28th Jan 2017</h2>
+          <h3 class="text-center"><span class="glyphicon glyphicon-map-marker"></span> Amrita School of Engineering, Amritapuri</h3>
+
+      </div>
+    </div>
+    </div>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <p class="lead" style = "text-align: center"> Welcome to Amrita Vishwa Vidyapeetham Annual Athletic Meet 2017 </p>
+          </div>
+      </div>
+
+<div class="container" id="events">
+        <h2 class="text-center">Events</h2>
+
+      <div class="row">
+            <table class="table table-striped table-bordered" id="event_table">
+
+            <tr>
+                <th>Men</th>
+                <th>Women</th>
+            </tr>
+            <tr>              <td colspan="2">
+              <center>March Past</center></td>
+            </tr>
+            <tr >
+                <td>100mtr</td>
+                <td>100mtr</td>
+            </tr>
+            <tr >
+                <td>200mtr</td>
+                <td>200mtr</td>
+            </tr>
+            <tr >
+                <td>400mtr</td>
+                <td>400mtr</td>
+            </tr>
+            <tr >
+                <td>800mtr</td>
+                <td>800mtr</td>
+            </tr>
+            <tr >
+                <td>1500mtr</td>
+                <td>1500mtr</td>
+            </tr>
+            <tr >
+                <td>5000mtr</td>                <td>100mtr hurdles</td>
+            </tr>
+            <tr >
+                <td>10000mtr</td>
+                <td>medley relay</td>
+
+            </tr>
+            <tr >
+                <td>110mtr hurdles</td>
+                <td>4x100mtr relay</td>
+            </tr>
+            <tr >
+                <td>400mtr hurdles</td>
+                <td>Triple jump</td>
+            </tr>
+            <tr >
+                <td>4x100mtr relay</td>
+                <td>long jump</td>
+            </tr>. <tr >
+                <td>4x400mtr relay</td>
+                <td>high jump</td>
+            </tr>
+
+            <tr>
+                <td>long jump</td>
+                <td>discuss throw</td>
+            </tr>
+            <tr>
+                <td>high jump</td>
+                <td>hammer throw</td>
+            </tr>
+            <tr>
+                <td>triple jump</td>
+                <td>javelin throw</td>
+            </tr>
+            <tr>
+                <td>shot put</td>
+                <td>shot put</td>
+            </tr>
+            <tr>
+                <td>javelin throw</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Hammer throw</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Discuss throw</td>
+                <td></td>
+            </tr>
+            </table>
+      </div>
+</div>
+
+
+     <div class="container">
+    <!--     <div class="row">
+          <a href="registration.html" class="btn btn-primary btn-lg col-md-2 col-md-offset-5">Register now</a>
+</div> !-->
+         </div>
+         <center>
+         <div class="container">
+             <h2 class="text-center">
+                Departments
+
+             </h2>
+             <div class="row dept">
+                <div class="col-md-12 box_dept">
+
+                    <center> <h3 class="text-center">CSA</center></h3>
+              <ul class="list-group">
+              <li class="list-group-item"> BCA</li>
+              <li class="list-group-item"> MCA</li>
+            </ul>
+                 </div>
+                 <div class="col-md-12 box_dept">
+                     <h3 class="text-center">CSE</h3>
+                     <ul class="list-group">
+              <li class="list-group-item"> Btech</li>
+              <li class="list-group-item">Mtech</li>              <li class="list-group-item">E-learning</li>              <li class="list-group-item">WNA</li>              <li class="list-group-item">Cyber</li>
+            </ul>
+                 </div>
+                 <div class="col-md-12 box_dept">                     <h3 class="text-center">ECE</h3>                     <ul class="list-group">              <li class="list-group-item"> Btech</li>              <li class="list-group-item">Mtech</li>              <li class="list-group-item">VLSI</li>            </ul>                 </div>                 <div class="col-md-12 box_dept">                     <h3 class="text-center">EEE</h3>                     <ul class="list-group">              <li class="list-group-item"> Btech</li>              <li class="list-group-item">Mtech</li>              <li class="list-group-item">Power Engg</li>              <li class="list-group-item">CSI</li>            </ul>                 </div>            <div class="col-md-12 box_dept">             <h3 class="text-center">Mech</h3>             <ul class="list-group">              <li class="list-group-item"> Btech</li>              <li class="list-group-item">Mtech</li>              <li class="list-group-item">TF</li>              <li class="list-group-item">Robotics and Auto</li>            </ul>                 </div>
+               </div>
+         </center>
+         <div class="container">
+             <div class="row" id = "rules_section">
+<!--			 <a id = "#rules_section"> </a> -->
+		  <h2 class="text-center">Rules & Regulations</h2>
+                  <ul id="rules_list " class="list-group">
+                      <li class="rules_list_item list-group-item"><span class="glyphicon glyphicon-ok"></span>  All students on the rolls of Amrita School Of Engineering are eligible to participate.</li>
+                      <li class="rules_list_item list-group-item"><span class="glyphicon glyphicon-ok"></span> The sports meet is conducted on Inter Branch Basis.</li>
+                      <li class="rules_list_item list-group-item"><span class="glyphicon glyphicon-ok"></span> A single student can enter for a maximum of 3 individual items.</li>
+                      <li class="rules_list_item list-group-item"><span class="glyphicon glyphicon-ok"></span> An individual event will be conducted only if there is a minimum of 3 participants.</li>
+                      <li class="rules_list_item list-group-item"><span class="glyphicon glyphicon-ok"></span> For team events,there can be a maximum of two team per batch. </li>
+                      <li class="rules_list_item list-group-item"><span class="glyphicon glyphicon-ok"></span> First, second, and third prizes will be given for each individual item.</li>
+                      <li class="rules_list_item list-group-item"><span class="glyphicon glyphicon-ok"></span> The overall championship will be awarded to the branch scoring maximum points based on the points for sports events.</li>
+                      <li class="rules_list_item list-group-item"><span class="glyphicon glyphicon-ok"></span> Registration will be closed at 2:00pm on 25th Jan</li>
+
+
+                  </ul>
+             </div>
+         </div>
+
+     </div>
+<a id="crick" class="" href="crickreg.html"><P class="text-center"><img src="img/superover.png" alt="Home" class="logo"></p></a>
+      <hr>
+      <footer>
+        <p class="text-center">&copy; <a href = "http://www.amrita.edu" target = "_blank">Amrita Vishwa Vidyapeetham</a></p>
+        <p class="text-center">Developed by <a href=developers.html>TECHWITHUS </a>(2017)</p>
+         </div>
+      </footer>
+      <script>
+           $(document).ready(function(){
+
+                $('.box_dept').hover(
+         function () {
+           $(this).css({"background-color":"#acd200"});
+         },
+         function () {
+           $(this).css({"background-color":"#6e1d2c"});
+          $(this).find("ul").slideUp(450);
+         }
+     );
+               $(".box_dept").on("hover",function(){
+                $(this).css("background","#d5de26");
+               });
+           $(".box_dept").on("click",function(){
+          $(this).find("ul").slideToggle();
+        });
+           });
+
+</script>
+    </div> <!-- /container -->
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+    </body>
+</html>

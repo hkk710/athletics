@@ -1,0 +1,116 @@
+!doctype html>
+
+<head>
+    <title>Amrita sports 2015 Group Event Creation</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../js/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="../js/bootstrap-theme.min.css">
+  
+     <!-- Custom styles -->
+     <link rel="stylesheet" href="../css/reg_form.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+   <script src="../js/reg_form.min.js"></script>
+   <script>
+       function check_form(){
+        var email = $("#email").val();
+        var phone = $("#student_phone").val();
+
+	var rollno = $("#student_rollno").val();
+	var rol_lower = rollno.toLowerCase();
+        ("#student_rollno").val()=$rol_lower;
+alert($("#student_rollno").val());
+alert($rol_lower);
+        var ck_phone = /^[0]?[789]\d{9}$/
+        var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+           
+        if (!ck_phone.test(phone)){
+          $("#student_phone").css("border","2px solid #6e1d2c");
+            return false;
+        }
+     
+        if (!ck_email.test(email)){
+          $("#email").css("border","2px solid #6e1d2c");
+            return false;
+        }
+        
+        else{
+         return true;
+        }
+       } 
+        </script>
+</head>
+
+<body>
+    <div class="form_wrap" id="reg_form">
+        <form class="form-horizontal" action = "create_group.php" method = "post" name="form" onsubmit="return check_form();">
+            <fieldset>
+             <!--header section-->
+               <div class="header" class="row">
+                   <div class="col-md-12" id="head-content">
+		
+		   </div>
+               </div>
+                <!-- Registration form
+                 -->
+                 <div id="legend">
+                <h3 class="text-center" class="subhead">Amrita sports 2015 Group Event Creation</h3>
+                </div>
+                <!--Name-->
+                <div id="feilds">
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="student_name">Name of Event</label>
+                    <div class="col-md-4">
+                        <input id="student_name" name="event_name" type="text" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Batch-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="student_batch">Minimum Participants</label>
+                    <div class="col-md-4">
+                        <input id="student_batch" name="min_participants" type="text" class="form-control input-md" required=""> 
+     	                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="student_phone">Maximum Participants</label>
+                    <div class="col-md-4">
+                        <input id="student_phone" name="Max_Participants" type="text" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                
+                <!-- Gender -->
+                <div class="form-group" id="student_gender">
+                    <label class="col-md-4 control-label" for="student_gender">Gender</label>
+                    <div class="col-md-4">
+                        <label class="radio-inline" for="student_gender-0">
+                            <input type="radio" name="student_gender" id="student_gender-0" value="male">Male
+                        </label>
+                        <label class="radio-inline" for="student_gender-1">
+                            <input type="radio" name="student_gender" id="student_gender-1" value="female">Female
+                        </label>
+                    </div>
+<span class="clearfix"></span>
+			<center>
+                       <input type="submit" value = "Create" class="pull-right btn btn-default clear" >
+			 </center>
+                </div>
+
+                       
+                        </div>
+
+                        </div>
+                </div>
+                
+            </fieldset>
+        </form>
+    </div>
+</body>

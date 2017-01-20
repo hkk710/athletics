@@ -1,0 +1,263 @@
+!doctype html>
+
+<head>
+    <title>Amrita sports 2015 registration</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="js/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="js/bootstrap-theme.min.css">
+  
+     <!-- Custom styles -->
+     <link rel="stylesheet" href="css/reg_form.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+   <script src="js/reg_form.min.js"></script>
+   <script>
+       function check_form(){
+        var email = $("#email").val();
+        var phone = $("#student_phone").val();
+        
+        var ck_phone = /^[0]?[789]\d{9}$/
+        var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+           
+        if (!ck_phone.test(phone)){
+          $("#student_phone").css("border","2px solid #6e1d2c");
+            return false;
+        }
+     
+        if (!ck_email.test(email)){
+          $("#email").css("border","2px solid #6e1d2c");
+            return false;
+        }
+        
+        else{
+         return true;
+        }
+       } 
+        </script>
+</head>
+
+<body>
+    <div class="form_wrap" id="reg_form">
+        <form class="form-horizontal" action = "after_reg.php" method = "post" name="form" onsubmit="return check_form();">
+            <fieldset>
+             <!--header section-->
+               <div class="header" class="row">
+                   <div class="col-md-12" id="head-content">
+                        <a href=index.html><img src="images/header.png"/></a>
+                   </div>
+               </div>
+                <!-- Registration form
+                 -->
+                 <div id="legend">
+                <h3 class="text-center" class="subhead">Registration form</h3>
+                </div>
+                <!--Name-->
+                <div id="feilds">
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="student_name">Name</label>
+                    <div class="col-md-4">
+                        <input id="student_name" name="student_name" type="text" placeholder="as in your id card" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Batch-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="student_batch">Batch</label>
+                    <div class="col-md-4">
+     <!--                   <input id="student_batch" name="student_batch" type="text" placeholder="EG:S4 BCA" class="form-control input-md" required=""> -->
+     		    <select id="student_batch" name="student_batch" >
+                        <option value="u_bca">BCA</option>
+                        <option value="u_bcs">B.Sc CS</option>                        
+                        <option value="u_cse">B.Tech CSE</option>
+                        <option value="u_ece">B.Tech ECE</option>
+                        <option value="u_eee">B.Tech EEE</option>
+                        <option value="u_me"> B.Tech ME </option>
+                        <option value="u_mca">MCA</option>
+                        <option value="u_mcs">M.Sc CS </option>
+                        <option value="p_cse">M.Tech CSE</option>
+                        <option value="p_cni">M.Tech Control & Instrumentation</option>
+                        <option value="p_cyb">M.Tech Cybersecurity</option>
+                        <option value="p_elr">M.Tech E-Learning</option>
+                        <option value="p_rba">M.Tech Robotics & Automation</option>
+                        <option value="p_pwe">M.Tech Power Energy</option>                      
+                        <option value="p_thf">M.Tech Thermal & Fluids</option>
+                        <option value="p_vlsi">M.Tech VLSI Design</option>   
+                        <option value="p_wna">M.Tech WNA</option>
+
+		    </select>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="student_rollno">Roll no</label>
+                    <div class="col-md-5">
+                        <input id="student_rollno" name="student_rollno" type="text" placeholder="EG:AM.AR.U313BCA052" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="student_phone">Phone</label>
+                    <div class="col-md-5">
+                        <input id="student_phone" name="student_phone" type="text" placeholder="It will be personal :)" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Email-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="email">Email</label>
+                    <div class="col-md-5">
+                        <input id="email" name="email" type="text" placeholder="it will also be personal :)" class="form-control input-md" required="" >
+
+                    </div>
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group" id="student_gender">
+                    <label class="col-md-4 control-label" for="student_gender">Gender</label>
+                    <div class="col-md-4">
+                        <label class="radio-inline" for="student_gender-0">
+                            <input type="radio" name="student_gender" id="student_gender-0" value="male">male
+                        </label>
+                        <label class="radio-inline" for="student_gender-1">
+                            <input type="radio" name="student_gender" id="student_gender-1" value="female">female
+                        </label>
+                    </div>
+                </div>
+                <!--event selector -->
+                <div class="form-group" id="events" >
+                <h3 class="text-center">Select events</h3>
+                    <div id="container">
+                       <div class="row">
+                       <!--first event set-->
+                       <div class="col-md-4" id="event-block-1">
+                       <label for="event_one"> Event 1
+                    <select id="event_dropdown" name="event_one" >
+                        <option  value="none" class="event_common">None</option>                    
+                        <option  value="101" class="event_male">100 mtr</option>
+                        <option value="201" class="event_female">100 mtr</option>
+                        <option value="102" class="event_male">200 mtr</option>                    
+                        <option value="202" class="event_female">200 mtr</option>
+                        <option value="103" class="event_male">400 mtr</option>                      
+                        <option value="203" class="event_female">400 mtr</option>                     
+     <!--                   <option value="103" class="event_common">100 mtr</option> -->
+                        <option value="104" class="event_male">800 mtr</option>
+                        <option value="204" class="event_female">800 mtr</option>
+                        <option value="105" class="event_male">1500 mtr</option>
+                        <option value="205" class="event_female">1500 mtr</option>
+                        <option value="106" class="event_male">5000 mtr</option>
+                        <option value="208" class="event_female">3000 mtr</option>                       
+                        <option value="107" class="event_male">10000 mtr</option>
+                        <option value="111" class="event_male">110 mtr hurdles</option>
+                        <option value="112" class="event_male">400 mtr hurdles</option>
+                        <option value="213" class="event_female">110 mtr hurdles</option>
+                        <option value="131" class="event_male">Long Jump</option>
+                        <option value="231" class="event_female">Long Jump</option>                        
+                        <option value="132" class="event_male">High Jump</option>
+                        <option value="133" class="event_male">Triple Jump</option>                                     
+                        <option value="233" class="event_female">Triple Jump</option>  
+                        <option value="141" class="event_male">Shot Put</option>
+                        <option value="241" class="event_female">Shot Put</option>
+                        <option value="142" class="event_male"> Discuss Throw </option>
+                        <option value="242" class="event_female"> Discuss Throw </option>                        
+                        <option value="143" class="event_male"> Javelin Throw </option>
+                        <option value="243" class="event_female"> Javelin Throw </option>
+                        <option value="144" class="event_male">Hammer Throw</option>
+                        <option value="244" class="event_female">Hammer Throw</option>                        
+                    </select>
+                      </label>
+                       </div>
+                       
+                       <!--second event set-->
+                       <div class="col-md-4" id="event-block-2">
+                       <label for="event_two"> Event 2
+                    <select id="event_dropdown" name="event_two" >
+                        <option  value="none" class="event_common">None</option>                    
+                        <option  value="101" class="event_male">100 mtr</option>
+                        <option value="201" class="event_female">100 mtr</option>
+                        <option value="102" class="event_male">200 mtr</option>                    
+                        <option value="202" class="event_female">200 mtr</option>
+                        <option value="103" class="event_male">400 mtr</option>                      
+                        <option value="203" class="event_female">400 mtr</option>                     
+     <!--                   <option value="103" class="event_common">100 mtr</option> -->
+                        <option value="104" class="event_male">800 mtr</option>
+                        <option value="204" class="event_female">800 mtr</option>
+                        <option value="105" class="event_male">1500 mtr</option>
+                        <option value="205" class="event_female">1500 mtr</option>
+                        <option value="106" class="event_male">5000 mtr</option>
+                        <option value="208" class="event_female">3000 mtr</option>                       
+                        <option value="107" class="event_male">10000 mtr</option>
+                        <option value="111" class="event_male">110 mtr hurdles</option>
+                        <option value="112" class="event_male">400 mtr hurdles</option>
+                        <option value="213" class="event_female">110 mtr hurdles</option>
+                        <option value="131" class="event_male">Long Jump</option>
+                        <option value="231" class="event_female">Long Jump</option>                        
+                        <option value="132" class="event_male">High Jump</option>
+                        <option value="133" class="event_male">Triple Jump</option>    
+                        <option value="233" class="event_female">Triple Jump</option>  
+                        <option value="141" class="event_male">Shot Put</option>
+                        <option value="241" class="event_female">Shot Put</option>
+                        <option value="142" class="event_male"> Discuss Throw </option>
+                        <option value="242" class="event_female"> Discuss Throw </option>                        
+                        <option value="143" class="event_male"> Javelin Throw </option>
+                        <option value="243" class="event_female"> Javelin Throw </option>
+                        <option value="144" class="event_male">Hammer Throw</option>
+                        <option value="244" class="event_female">Hammer Throw</option> 
+                    </select>
+                      </label>
+                       </div>
+                       <!--third event set-->
+                       <div class="col-md-4" id="event-block-3">
+                       <label for="event_three"> Event 3
+                    <select id="event_dropdown" name="event_three" >
+                        <option  value="none" class="event_common">None</option>                    
+                        <option  value="101" class="event_male">100 mtr</option>
+                        <option value="201" class="event_female">100 mtr</option>
+                        <option value="102" class="event_male">200 mtr</option>                    
+                        <option value="202" class="event_female">200 mtr</option>
+                        <option value="103" class="event_male">400 mtr</option>                      
+                        <option value="203" class="event_female">400 mtr</option>                     
+     <!--                   <option value="103" class="event_common">100 mtr</option> -->
+                        <option value="104" class="event_male">800 mtr</option>
+                        <option value="204" class="event_female">800 mtr</option>
+                        <option value="105" class="event_male">1500 mtr</option>
+                        <option value="205" class="event_female">1500 mtr</option>
+                        <option value="106" class="event_male">5000 mtr</option>
+                        <option value="208" class="event_female">3000 mtr</option>                       
+                        <option value="107" class="event_male">10000 mtr</option>
+                        <option value="111" class="event_male">110 mtr hurdles</option>
+                        <option value="112" class="event_male">400 mtr hurdles</option>
+                        <option value="213" class="event_female">110 mtr hurdles</option>
+                        <option value="131" class="event_male">Long Jump</option>
+                        <option value="231" class="event_female">Long Jump</option>                        
+                        <option value="132" class="event_male">High Jump</option>
+                        <option value="133" class="event_male">Triple Jump</option>    
+                        <option value="233" class="event_female">Triple Jump</option>  
+                        <option value="141" class="event_male">Shot Put</option>
+                        <option value="241" class="event_female">Shot Put</option>
+                        <option value="142" class="event_male"> Discuss Throw </option>
+                        <option value="242" class="event_female"> Discuss Throw </option>                        
+                        <option value="143" class="event_male"> Javelin Throw </option>
+                        <option value="243" class="event_female"> Javelin Throw </option>
+                        <option value="144" class="event_male">Hammer Throw</option>
+                        <option value="244" class="event_female">Hammer Throw</option> 
+                    </select>
+                      </label>
+                       </div>
+                       <span class="clearfix"></span>
+                       <input type="submit" value = "Register" class="pull-right btn btn-default clear">
+                        </div>
+                        </div>
+                </div>
+                
+            </fieldset>
+        </form>
+    </div>
+</body>

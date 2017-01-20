@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title> kalotsavam</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="CSS-only Responsive Layout with Smooth Transitions" />
+        <meta name="keywords" content="css3, transitions, animations, css-only, navigation, smooth scrolling, full width, full height, window width, window height" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/modernizr.custom.79639.js"></script> 
+		<!--[if lte IE 8]>
+			 <link rel="stylesheet" type="text/css" href="css/simple.css" />
+		<![endif]-->
+
+  
+  
+
+
+
+<style>
+    
+    #sam{
+        background-color:#1abc9c;
+        background-size: cover;
+        
+        height: 270px;
+    }
+    
+    
+    
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: whitesmoke;
+    text-align:1 center;
+    
+    
+    padding: 20px 20px;
+    text-decoration:none;
+    
+}
+
+li a:hover {
+    background-color: black;
+    
+}
+   </style>
+<title>Kalotsavam</title>
+</head>
+<body>
+<?php
+session_start();
+if(isset($_SESSION["user"]))
+{
+?>
+
+
+<form name="f1" method="POST" action="regsolo.php">
+<center><h1>On Stage Group Events</h1></center>
+       <table border=1>
+<tr><th>Events
+</th>
+    <th>Ganamela
+</th>
+<th>Jugalbandi
+</th>
+<th>Western Group
+</th>
+<th>Folk Song
+</th>
+<th>Sanskrit Song
+</th>
+    <th>Patriotic Song
+</th>
+    <th>Classical Group
+</th>
+<th>Non Classical Group
+</th>
+<th>Thiruvathira
+</th>
+<th>Synchro
+</th>
+    <th>Nostalgia
+</th>
+    <th>
+        Opana
+    </th>
+     <th>
+        Drama English
+    </th>
+     <th>
+        Drama Malayalam
+    </th>
+     <th>
+        Mime
+    </th>
+     <th>
+        Tableau
+    </th>
+     <th>
+        Kathaprasangam
+    </th>
+     <th>
+        Movie Spoof
+    </th>
+     <th>
+        Debate English
+    </th>
+     <th>
+        Debate Malayalam
+    </th>
+
+</tr>
+
+<tr><td>Event 1
+</td>
+    <td><input type="Radio" name="event1" value="Ganamela" required="">
+</td>
+<td><input type="Radio" name="event1" value="Jugalbandi" required="">
+</td>
+<td><input type="Radio" name="event1" value="Western Group" required="">
+</td>
+<td><input type="Radio" name="event1" value="Folk Song" required="">
+</td>
+<td><input type="Radio" name="event1" value="Sanskrit Song" required="">
+</td>
+<td><input type="Radio" name="event1" value="Patriotic Song" required="">
+</td>
+<td><input type="Radio" name="event1" value="Classical Group" required="">
+</td>
+<td><input type="Radio" name="event1" value="Non Classical Group" required="">
+</td>
+<td><input type="Radio" name="event1" value="Thiruvathira" required="">
+</td>
+<td><input type="Radio" name="event1" value="Synchro" required="">
+</td>
+<td><input type="Radio" name="event1" value="Nostalgia" required="">
+</td>
+<th><input type="Radio" name="event1" value=" Opana" required="">
+</th>
+<th><input type="Radio" name="event1" value="Drama English" required="">
+</th>
+<th><input type="Radio" name="event1" value="Drama Malayalam" required="">
+</th>
+<th><input type="Radio" name="event1" value="Mime" required="">
+</th>
+<th><input type="Radio" name="event1" value="Tableau" required="">
+</th>
+<th><input type="Radio" name="event1" value="Kathaprasangam" required="">
+</th>
+<th><input type="Radio" name="event1" value="Movie Spoof" required="">
+</th>
+<th><input type="Radio" name="event1" value="Debate English" required="">
+</th>
+<th><input type="Radio" name="event1" value="Debate Malayalam" required="">
+</th>
+
+</tr>
+
+<tr><td>Event 2
+</td>
+    <td><input type="Radio" name="event2" value="ganamela" required="">
+</td>
+<td><input type="Radio" name="event2" value="Jugalbandi" required="">
+</td>
+<td><input type="Radio" name="event2" value="Western Group" required="">
+</td>
+<td><input type="Radio" name="event2" value="Folk Song" required="">
+</td>
+<td><input type="Radio" name="event2" value="Sanskrit Song" required="">
+</td>
+<td><input type="Radio" name="event2" value="Patriotic Song" required="">
+</td>
+<td><input type="Radio" name="event2" value="Classical Group" required="">
+</td>
+<td><input type="Radio" name="event2" value="Non Classical Group" required="">
+</td>
+<td><input type="Radio" name="event2" value="Thiruvathira" required="">
+</td>
+<td><input type="Radio" name="event2" value="Synchro" required="">
+</td>
+<td><input type="Radio" name="event2" value="Nostalgia" required="">
+</td>
+<th><input type="Radio" name="event2" value=" Opana" required="">
+</th>
+<th><input type="Radio" name="event2" value="Drama English" required="">
+</th>
+<th><input type="Radio" name="event2" value="Drama Malayalam" required="">
+</th>
+<th><input type="Radio" name="event2" value="Mime" required="">
+</th>
+<th><input type="Radio" name="event2" value="Tableau" required="">
+</th>
+<th><input type="Radio" name="event2" value="Kathaprasangam" required="">
+</th>
+<th><input type="Radio" name="event2" value="Movie Spoof" required="">
+</th>
+<th><input type="Radio" name="event2" value="Debate English" required="">
+</th>
+<th><input type="Radio" name="event2" value="Debate Malayalam" required="">
+</th>
+
+</tr>
+
+
+<tr><td>Event 3
+</td>
+    <td><input type="Radio" name="event3" value="Ganamela" required="">
+</td>
+<td><input type="Radio" name="event3" value="Jugalbandi" required="">
+</td>
+<td><input type="Radio" name="event3" value="Western Group" required="">
+</td>
+<td><input type="Radio" name="event3" value="Folk Song" required="">
+</td>
+<td><input type="Radio" name="event3" value="Sanskrit Song" required="">
+</td>
+<td><input type="Radio" name="event3" value="Patriotic Song" required="">
+</td>
+<td><input type="Radio" name="event3" value="Classical Group" required="">
+</td>
+<td><input type="Radio" name="event3" value="Non Classical Group" required="">
+</td>
+<td><input type="Radio" name="event3" value="Thiruvathira" required="">
+</td>
+<td><input type="Radio" name="event3" value="Synchro" required="">
+</td>
+<td><input type="Radio" name="event3" value="Nostalgia" required="">
+</td>
+<th><input type="Radio" name="event3" value=" Opana" required="">
+</th>
+<th><input type="Radio" name="event3" value="Drama English" required="">
+</th>
+<th><input type="Radio" name="event3" value="Drama Malayalam" required="">
+</th>
+<th><input type="Radio" name="event3" value="Mime" required="">
+</th>
+<th><input type="Radio" name="event3" value="Tableau" required="">
+</th>
+<th><input type="Radio" name="event3" value="Kathaprasangam" required="">
+</th>
+<th><input type="Radio" name="event3" value="Movie Spoof" required="">
+</th>
+<th><input type="Radio" name="event3" value="Debate English" required="">
+</th>
+<th><input type="Radio" name="event3" value="Debate Malayalam" required="">
+</th>
+
+</tr>
+
+<tr><td>Event 4
+</td>
+    <td><input type="Radio" name="event4" value="ganamela" required="">
+</td>
+<td><input type="Radio" name="event4" value="Jugalbandi" required="">
+</td>
+<td><input type="Radio" name="event4" value="Western Group" required="">
+</td>
+<td><input type="Radio" name="event4" value="Folk Song" required="">
+</td>
+<td><input type="Radio" name="event4" value="Sanskrit Song" required="">
+</td>
+<td><input type="Radio" name="event4" value="Patriotic Song" required="">
+</td>
+<td><input type="Radio" name="event4" value="Classical Group" required="">
+</td>
+<td><input type="Radio" name="event4" value="Non Classical Group" required="">
+</td>
+<td><input type="Radio" name="event4" value="Thiruvathira" required="">
+</td>
+<td><input type="Radio" name="event4" value="Synchro" required="">
+</td>
+<td><input type="Radio" name="event4" value="Nostalgia" required="">
+</td>
+<th><input type="Radio" name="event4" value=" Opana" required="">
+</th>
+<th><input type="Radio" name="event4" value="Drama English" required="">
+</th>
+<th><input type="Radio" name="event4" value="Drama Malayalam" required="">
+</th>
+<th><input type="Radio" name="event4" value="Mime" required="">
+</th>
+<th><input type="Radio" name="event4" value="Tableau" required="">
+</th>
+<th><input type="Radio" name="event4" value="Kathaprasangam" required="">
+</th>
+<th><input type="Radio" name="event4" value="Movie Spoof" required="">
+</th>
+<th><input type="Radio" name="event4" value="Debate English" required="">
+</th>
+<th><input type="Radio" name="event4" value="Debate Malayalam" required="">
+</th>
+
+</tr>
+
+	</table>
+
+
+
+<center><h1>Off Stage Group Events</h1></center>
+       <table border=1>
+<tr><th>Events
+</th>
+<th>Face Painting
+</th>
+    <th>Rangoli
+</th>
+    <th>Paper Collage
+</th>
+</tr>
+
+<tr><th>Event 1
+</th>
+<th><input type="radio" name="event11" value="Face Painting" required="">
+</th>
+<th><input type="radio" name="event11" value="Rangoli" required="">
+</th>
+<th><input type="radio" name="event11" value="Paper Collage" required="">
+</th>
+</tr>
+
+<tr><th>Event 2
+</th>
+<th><input type="radio" name="event12" value="Face Painting" required="">
+</th>
+<th><input type="radio" name="event12" value="Rangoli" required="">
+</th>
+<th><input type="radio" name="event12" value="Paper Collage" required="">
+</th></tr>
+
+
+<tr><th>Event 3
+</th>
+<th><input type="radio" name="event13" value="Face Painting" required="">
+</th>
+<th><input type="radio" name="event13" value="Rangoli" required="">
+</th>
+<th><input type="radio" name="event13" value="Paper Collage" required="">
+</th></tr>
+
+<tr><th>Event 4
+</th>
+<th><input type="radio" name="event4" value="Face Painting" required="">
+</th>
+<th><input type="radio" name="event14" value="Rangoli" required="">
+</th>
+<th><input type="radio" name="event14" value="Paper Collage" required="">
+</th></tr>
+
+
+	</table><br><br><br><center>
+<input type="submit" value="register"></center>
+</form>
+
+<?php
+}
+else
+{?>
+<h1><a href="../login.html">Log in first</a></h1>
+<?php
+}
+?>
+</body>
+</html>

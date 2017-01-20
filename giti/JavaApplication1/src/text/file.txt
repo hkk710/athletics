@@ -1,0 +1,12 @@
+We are developing a platform that will bring down all aspects of event management under one roof. 
+Our Application helps in publicity, administration, and event discovery in one platform of Roshini. 
+This application can be used to handle any type of events.
+ The app acts like content management solution for event management teams by Maya. 
+This will be more like a social network for event management. 
+Our app is not limited to any events or it does not have any pre-defined event types .
+The user can create his own event based on his requirements. 
+All events have an event homepage where the user can provide the information for all the static content of the event. 
+This homepage can be customized by the users.
+ Users can add their own branding items like background, brand colors, logo etc.
+The event administrators will be provided with an extensive control panel which will provide all information about the registered users, analytics and other critical information. 
+The application also has global user account system which will enable any common people to host and pull the crowd to any event as this was done by Athira of S6BCA.

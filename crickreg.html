@@ -1,0 +1,191 @@
+<!doctype html>
+
+<head>
+    <title>Amrita sports 2017 registration</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="js/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="js/bootstrap-theme.min.css">
+
+     <!-- Custom styles -->
+     <link rel="stylesheet" href="css/reg_form.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+   <script src="js/reg_form.min.js"></script>
+   <script>
+       function check_form(){
+        var email = $("#email").val();
+        var phone = $("#student_phone").val();
+
+        var ck_phone = /\(?\d{3}\)?([-\/\.])\d{3}\1\d{4}/
+        var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+/*        if (!ck_phone.test(phone)){
+          $("#student_phone").css("border","2px solid #6e1d2c");
+            return false;
+        }
+*/
+        if (!ck_email.test(email)){
+          $("#email").css("border","2px solid #6e1d2c");
+            return false;
+        }
+
+        else{
+         return true;
+        }
+       }
+        </script>
+</head>
+
+<body>
+    <div class="form_wrap" id="reg_form">
+		        <div class="navbar-collapse collapse">
+        <center>  <a class="pull-left" href="index.html"><img src="img/header.png" alt="Home" class="logo"> </center> &lArr; BACK HOME</a> </div>
+        <form class="form-horizontal" action = "crickphp.php" method = "post" name="form" >
+            <fieldset>
+             <!--header section-->
+               <div class="header" class="row">
+                   <center><div id="head-content">
+                        <a href=index.html><img src="images/header.png"/></a>
+                   </div></center>
+               </div>
+                   <div class="row" id = "rules_section">
+
+      <!--			 <a id = "#rules_section"> </a> -->
+
+      		  <h2 class="text-center" style="color:blue">Rules & Regulations</h2>
+
+                        <ul id="rules_list " class="list-group" style="width:1000px;margin-left:25px">
+
+                            <li class="rules_list_item list-group-item"><span class="glyphicon glyphicon-ok"></span>  Five members per team.</li>
+
+                            <li class="rules_list_item list-group-item"><span class="glyphicon glyphicon-ok"></span> Separate teams for boys and girls.</li>
+
+                            <li class="rules_list_item list-group-item"><span class="glyphicon glyphicon-ok"></span> Two overs per innings.</li>
+
+                            <li class="rules_list_item list-group-item"><span class="glyphicon glyphicon-ok"></span> Teams can include staffs and students.</li>
+
+                        </ul>
+
+                   </div>
+
+                <!-- Registration form
+                 -->
+                 <div id="legend">
+                <h3 class="text-center" class="subhead">Super Over Cricket Registration</h3>
+                </div>
+                 <!--Name-->
+                <div id="feilds">
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="student_name">Team Name </label>
+                    <div class="col-md-4">
+                        <input id="student_name" name="team" type="text" placeholder="Must be Unique" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+                <!--Name-->
+                <div id="feilds">
+                <div class="form-group">
+				<center>Make sure that all the team members are in same Department. Name, Gender, Contact and Batch should be of the Captain </center><br><br>
+                    <label class="col-md-4 control-label" for="student_name">Captain's Name</label>
+                    <div class="col-md-4">
+                        <input id="student_name" name="p1" type="text" placeholder="as in your id card" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+    <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="student_rollno">Captain's ID</label>
+                    <div class="col-md-5">
+                        <input id="student_rollno" name="roll" type="text" placeholder="EG:AM.AR.U313BCA001" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Batch-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="student_batch">Captain's Batch</label>
+                    <div class="col-md-4">
+     <!--                   <input id="student_batch" name="student_batch" type="text" placeholder="EG:S4 BCA" class="form-control input-md" required=""> -->
+     		    <select id="student_batch" name="batch" >
+            <!--            <option value="u_bca">BCom</option>
+                        <option value="u_bcs">MCom</option>
+                        <option value="u_cse">BBM/BBA</option>
+                        <option value="u_ece">MSW</option>
+                        <option value="u_eee">Int M A</option>
+                        <option value="u_me">Int MSc</option>
+                        <option value="u_mca">Multimedia</option>            -->
+            <option value="u_bca">CSA</option>            <option value="u_cse">CSE</option>            <option value="u_eee">EEE</option>            <option value="u_ece">ECE</option>            <option value="u_me">ME</option>
+		    </select>
+                    </div>
+                </div>
+ <!-- Gender -->
+                <div class="form-group" id="student_gender">
+                    <label class="col-md-4 control-label" for="student_gender">Gender</label>
+                    <div class="col-md-4">
+                        <label class="radio-inline" for="student_gender-0">
+                            <input type="radio" name="gender" id="student_gender-0" value="M">male
+                        </label>
+                        <label class="radio-inline" for="student_gender-1">
+                            <input type="radio" name="gender" id="student_gender-1" value="F">female
+                        </label>
+                    </div>
+
+
+                      </label>
+                       </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="student_phone">Phone</label>
+                    <div class="col-md-5">
+                        <input id="student_phone" name="phone" type="text" placeholder="It will be personal :)" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- P1-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="email">Player 2</label>
+                    <div class="col-md-5">
+                        <input  name="p2" type="text" placeholder="Let them know first" class="form-control input-md" required="" >
+
+                    </div>
+                </div>
+                <!-- P2-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="email">Player 3</label>
+                    <div class="col-md-5">
+                        <input  name="p3" type="text" placeholder="Let them know first" class="form-control input-md" required="" >
+
+                    </div>
+                </div>
+                <!-- P3-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="email">Player 4</label>
+                    <div class="col-md-5">
+                        <input  name="p4" type="text" placeholder="Let them know first" class="form-control input-md" required="" >
+
+                    </div>
+                </div>
+                <!-- p4-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="email">Player 5</label>
+                    <div class="col-md-5">
+                        <input  name="p5" type="text" placeholder="Let them know first " class="form-control input-md" required="" >
+
+                    </div>
+                </div>
+
+
+                       <span class="clearfix"></span>
+                       <input type="submit" value = "Register" class="pull-right btn btn-default clear">
+                        </div>
+                        </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+</body>

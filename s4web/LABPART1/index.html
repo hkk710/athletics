@@ -1,0 +1,145 @@
+<html>
+<head >
+	
+	<script>
+
+function input()
+{
+	var name=prompt("Please enter your name");
+	if(name!=null )
+	{
+		// alert(name);
+		document.getElementById("pmt").innerHTML="WELCOME "+name+" !! ";
+	}
+}
+function mover()
+{
+	document.getElementById("pm1").innerHTML="MOUSE OVER"; 
+}
+function mdown()
+{
+	document.getElementById("pm1").innerHTML="MOUSE CLICKED";
+}
+function mout()
+{
+	document.getElementById("pm1").innerHTML="MOUSE OUT";
+}
+function mup()
+{
+	document.getElementById("pm1").innerHTML="MOUSE UP";
+}
+
+</script>
+<style>
+body {
+    background-color: #000033;
+}
+div {
+    background-color: lightgrey;
+   width:1150px;
+	height:1000px;
+    padding: 25px;
+    border: 25px solid navy;
+    margin: 25px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+ 	border: 2px solid #a1a1a1;
+    padding: 10px 40px; 
+    background: #003399;
+    width: 800px;
+    border-radius: 2px;
+}
+p.ex {
+    color: rgb(0,0,0);
+	//font-family: "Harlow Solid Italic";
+	font-size: 36px;
+}
+LOL{
+	color:#000000;
+	background-color:#CCCCCC;
+	padding:1px;
+}
+div2 {
+    border: 2px solid #a1a1a1;
+    padding: 10px 40px; 
+    background: #336600;
+    width: 300px;
+    border-radius: 25px;
+}
+div3 {
+    border: 2px solid #a1a1a1;
+    padding: 10px 40px; 
+    background: #336600;
+    width: 1250px;
+}
+p3    {color:white;
+font-weight: bold;
+}
+
+  
+
+
+
+  <title>RAILWAY</title>
+
+</style>
+</head>
+<body  onload="input()">
+
+
+
+ <div><center> <h1>INDIAN RAILWAY</center></h1>
+ <p id="pmt"></p>
+<img src="maharajas-express-2.jpg" alt="MAHARAJA's EXPRESS" style="float:right" width="500" height="200" border="10" align="center" onmousedown="mdown(this)" onmouseup="mup(this)" onmouseover="mover(this)"  onmouseout="mout(this)"/>
+
+
+
+
+<!--
+<center>
+ <div2><a id="LOL" href="t1.html"><p3>ACADEMICS</p3></a></div2>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<div2><a id="LOL" href="t2.html"><p3>PERSONAL</p3></a></div2>
+</div2>
+</center>
+!-->
+
+
+  <p class="ex" align="left">Indian Railway is the largest employer of the whole world and covering the maximum no: of trains running in world over a track which is spreading over a distance which is ranked as the 3rd largest in this planet</p>
+<p id="pm1" align="right"></p>
+<br>
+<ul>
+	<li>Luxury</li>
+	<li>Cheap</li>
+	<li>Fast</li>
+	<li>Reliable</li>
+	</ul>
+<br>
+  <p class="ex" align="center">
+<table border=10>
+<th colspan=10> <h2>TRAINS</h2></th>
+<tr><td ><BOLD>SHATABDI</BOLD></td>
+<td >CONNECTING TWO CITY CENTERS IN DIFFERENT STATES. IT IS THE FASTEST GROUP OF TRAINS IN INDIA. IT IS FULLY AIR CONDITIONED WITH EXECUTIVE CHAIR CAR AND AC CHAIR CAR</td></tr>
+<tr><td><BOLD>RAJDHANI EXPRESS</BOLD></td>
+<td>IT CONNECTS A STATE CAPITAL WITH CITY CAPITAL. THESE SUPERFAST TRAINS ARE FULLY AIR CONDITIONED AND WITH FEW HALTS. THE FIRST RAJDHANI WAS BETWEEN HOWRAH AND NEW DELHI IN 1989.</td></tr>
+<tr><td ><BOLD>DURONTO EXPRESS</BOLD></td>
+<td >THESE ARE NON STOP EXPRESS TRAINS WHICH RUNS IN SHORT AND LONG HAWLS. IT HAVE BOTH AC AND NON AC COMPARTMENTS. </td></tr>
+<tr><td ><BOLD>SUPERFAST EXPRESS</BOLD></td>
+<td >THESE TRAINS RUN IN LONG DISTANCE WITH HALTS IN IMPORTANT CITY CENTERS ONLY. IT USUALLY RUNS WITH WAP4/5/7 OR WDP 3A/4/4D </td></tr>
+<tr><td ><BOLD>JAN SHATABDI</BOLD></td>
+<td >THESE ARE SUPERFAST INTERCITY EXPRESS TRAINS WHICH ONLY STOPS IN MAXIMUM OF 3 CITY CENTERS IN A DISTRICT WITH A MINIMUM DISTANCE OF 50KMS APART. THE TRAIN WILL RUN B/W DESTINATIONS WITHIN 1000 KMS   </td></tr>
+<tr><td ><BOLD>EXPRESS TRAINS</BOLD></td>
+<td >THESE ARE LIMITED STOP TRAINS WHICH RUNS OVER A SHORT OR LONG DISTANCES. IT USES WAP 4 AND WDP 3A ENGINES  </td></tr>
+<tr><td ><BOLD>PASSENGER TRAINS</BOLD></td>
+<td >THESE TRAINS ONLY HAVE GENERAL 2S COMPARTMENTS WHICH ARE NOT INTERCONNECTED. IT RUNS B/W VERY SHORT DISTANCES WITH HAVING STOPAGES IN ALL THE STATIONS INTERMEDIATING. IT INCLUDES MEMU, DMU AND OTHER LOCAL TRAINS </td></tr>
+
+</table>
+
+</p>
+</div>
+</body>
+
+</html>

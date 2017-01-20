@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+      <title>Registration</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,200,100,300,500,600,800,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,700italic,900,400italic,300italic' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.sticky.js"></script>
+      <link rel="stylesheet" href="css/style1.css" />
+<script type="text/javascript" src="js/JFCore.js"></script>
+  
+    </head>
+   
+    <style>
+    /* Base styles */
+.btn-instagram {
+  font-size: 1.2em;
+  font-family: sans-serif;
+  color:#333;
+    text-shadow:1px 1px #fff;
+    text-decoration: none;
+    display:inline-block; 
+    padding:0.5em 1.75em 0.5em 1em;
+    border-radius: 0.25em;
+    background: #f8f8f8;
+    border:1px solid #ccc;
+    border-right:0.25em solid #00558D; /* blue stripe */
+    position: relative;
+    margin:0 0 1px; 
+}
+
+.btn-instagram:before, .btn-instagram:after {
+    content:'';
+    display:block;
+    position: absolute;
+}
+
+/* Add Stripes */
+.btn-instagram:before {
+    width:0.25em;
+    height: 100%;
+    background:#FBB03B; /* yellow stripe */ 
+    border-left:0.25em solid #D4145A; /* red stripe */ 
+    border-right:0.25em solid #00A99D; /* green stripe */ 
+    top:0;
+    right:0;
+}
+
+/* Add Hightlights */
+.btn-instagram:after {
+    width:100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0.25em;
+    padding-left: 0.25em;
+    box-shadow: inset 1px 1px 0px rgba(255,255,255,0.5), inset -1px -1px 0 rgba(0,0,0,0.1);
+
+background: -moz-linear-gradient(top,  rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.2) 49%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.35)), color-stop(49%,rgba(255,255,255,0.2)), color-stop(50%,rgba(255,255,255,0)), color-stop(100%,rgba(0,0,0,0.1)));
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0.35) 0%,rgba(255,255,255,0.2) 49%,rgba(255,255,255,0) 50%,rgba(0,0,0,0.1) 100%);
+background: -o-linear-gradient(top,  rgba(255,255,255,0.35) 0%,rgba(255,255,255,0.2) 49%,rgba(255,255,255,0) 50%,rgba(0,0,0,0.1) 100%);
+background: -ms-linear-gradient(top,  rgba(255,255,255,0.35) 0%,rgba(255,255,255,0.2) 49%,rgba(255,255,255,0) 50%,rgba(0,0,0,0.1) 100%);
+background: linear-gradient(to bottom,  rgba(255,255,255,0.35) 0%,rgba(255,255,255,0.2) 49%,rgba(255,255,255,0) 50%,rgba(0,0,0,0.1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59ffffff', endColorstr='#1a000000',GradientType=0 );
+
+}
+
+
+/* Animate - Fade */
+.btn-instagram, .btn-instagram:before {
+    -webkit-transition-property: background, border;
+    -webkit-transition: 0.1s ease-in;
+    -moz-transition-property: background, border;
+    -moz-transition: 0.1s ease-in;
+    -o-transition-property: background, border;
+    -o-transition: 0.1s ease-in;
+    transition-property: background, border;
+    transition: 0.1s ease-in;
+
+}
+
+/* Hover / Focus */
+.btn-instagram:hover, .btn-instagram:focus  {
+    background: #fff;
+}
+
+.btn-instagram:hover {
+    border-right:0.25em solid #09c;
+}
+
+.btn-instagram:hover:before {
+    background:#fc6; /* yellow stripe */ 
+    border-left:0.25em solid #f06; /* red stripe */ 
+    border-right:0.25em solid #0cc; /* green stripe */ 
+}
+
+.btn-instagram:hover:after {
+background: -moz-linear-gradient(top,  rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.1) 49%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.05) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.25)), color-stop(49%,rgba(255,255,255,0.1)), color-stop(50%,rgba(255,255,255,0)), color-stop(100%,rgba(0,0,0,0.05)));
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0.25) 0%,rgba(255,255,255,0.1) 49%,rgba(255,255,255,0) 50%,rgba(0,0,0,0.05) 100%);
+background: -o-linear-gradient(top,  rgba(255,255,255,0.25) 0%,rgba(255,255,255,0.1) 49%,rgba(255,255,255,0) 50%,rgba(0,0,0,0.05) 100%);
+background: -ms-linear-gradient(top,  rgba(255,255,255,0.25) 0%,rgba(255,255,255,0.1) 49%,rgba(255,255,255,0) 50%,rgba(0,0,0,0.05) 100%);
+background: linear-gradient(to bottom,  rgba(255,255,255,0.25) 0%,rgba(255,255,255,0.1) 49%,rgba(255,255,255,0) 50%,rgba(0,0,0,0.05) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40ffffff', endColorstr='#0d000000',GradientType=0 );
+
+}
+
+/* Active */
+.btn-instagram:active {
+    margin:1px 0 0; 
+}
+        
+        
+        
+        
+         .btn-instagram {
+        margin: 50px;
+       
+        left: 0;
+        /* Chrome, Safari, Opera */
+        -webkit-animation-name: shakeit;
+        -webkit-animation-duration: 2s;
+        /* Standard syntax */
+        animation-name: shakeit;
+        animation-duration: 2s;
+    }
+    
+   
+    @-webkit-keyframes shakeit {
+        12.5% {left: -50px;}
+        25% {left: 50px;}
+        37.5% {left: -25px;}
+        50% {left: 25px;}
+        62.5% {left: -10px;}
+        75% {left: 10px;}
+    }
+    
+    
+    @keyframes shakeit {
+        12.5% {left: -50px;}
+        25% {left: 50px;}
+        37.5% {left: -25px;}
+        50% {left: 25px;}
+        62.5% {left: -10px;}
+        75% {left: 10px;}
+    }
+</style>
+    <!-- <script type="text/javascript">
+        
+    function showhide(id) 
+        {
+            var e = document.getElementById(id);
+            e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+        }
+    
+    </script>-->
+   
+<script type="text/javascript">
+			(function() {
+				JC.init({
+					domainKey: ''
+				});
+				})();
+		</script>
+    
+<body>
+    <center>
+   <div style="text-align:center">
+  
+    <a class="btn-instagram"> <!--href="javascript:showhide('wrap')"--> 
+      <b> REGISTER</b> 
+       </a>
+  
+<div class="wrap">
+<!-- tab style-1 -->
+<div class="row">
+	<div class="grid_12 columns">
+		<div class="tab style-1">
+    					<dl>
+ 			              <dd class="users"><a class="user active" href="#tab1" > </a></dd>
+    						
+    					</dl>
+    					<ul>
+    						<li class="active">
+			    				<div class="form">		
+										<input type="text" class="active textbox" value="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}">
+										<input type="text" class="textbox" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}">
+										<input type="text" class="textbox" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
+                                        <input type="text" class="textbox" value="Phone Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone Number';}">
+                                     <select value="events" class="textbox" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'events';}">
+                                    <option>abc</option>
+                                    <option>xyz</option>
+                                    </select>
+                                    
+										
+										<input type="submit" value="Register">
+							    </div>
+							</li>
+    						
+      							
+    					</ul>
+		</div>
+</div>            
+</div>			
+</div>
+
+                                </div>	
+
+<div class="clear"> </div>
+</div>
+</body>
+</html>

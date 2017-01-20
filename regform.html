@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title> Sports Registration </title>
+	</head>
+	<body>
+		<h1> Registration Form </h1>
+		<form action = "reg_handler.php" method = "post">
+			Name: <input type = "text" name = "name">
+			<br>
+			Registration Number: <input type = "text" name = "roll">
+			<br>
+			Batch: <select name = "batch">
+				<option value = "nochoice"> No Choice </option>
+				<option value = "cse"> CSE </option>
+				<option value = "me"> ME </option>
+				<option value = "eee"> EEE </option>
+				<option value = "ece"> ECE </option>		
+				<option value = "bca"> BCA </option>
+				</select>
+			<br>
+			Gender: <select name = "gender">
+					<option value = "male"> Male </option>
+					<option value = "female"> Female </option>		
+					</select>	
+			<br>		
+			Phone: <input type = "text" name = "phone">
+			<br>
+			Event 1: <select name = "event1">
+					<option value = "nochoice"> No Choice </option>
+					<option value = "101"> Hurdles </option>
+					<option value = "102"> Relay </option>
+					<option value = "103"> Long Jump </option>		
+					<option value = "104"> High Jump </option>
+					</select>
+			<br>
+			Event 2: <select name = "event2">
+					<option value = "nochoice"> No Choice </option>
+					<option value = "101"> Hurdles </option>
+					<option value = "102"> Relay </option>
+					<option value = "103"> Long Jump </option>		
+					<option value = "104"> High Jump </option>					
+					<select>
+			<br>
+			Event 3: <select name = "event3">
+					<option value = "nochoice"> No Choice </option>			
+					<option value = "101"> Hurdles </option>
+					<option value = "102"> Relay </option>
+					<option value = "103"> Long Jump </option>		
+					<option value = "104"> High Jump </option>
+					</select>
+			<br>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>

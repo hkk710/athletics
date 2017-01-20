@@ -1,0 +1,61 @@
+<!doctype html>
+
+<head>
+    <title>Amrita sports 2015 registration</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../js/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="../js/bootstrap-theme.min.css">
+  
+     <!-- Custom styles -->
+     <link rel="stylesheet" href="../css/reg_form.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+   <script src="../js/reg_form.min.js"></script>
+  
+</head>
+
+<body>
+    <div class="form_wrap" id="reg_form">
+	
+        <form class="form-horizontal" action = "add.php" method = "post" name="form" onsubmit="return check_form();">
+            <fieldset>
+             <!--header section-->
+               <div class="header" class="row">
+                   <div class="col-md-12" id="head-content">
+                       <img src="../images/header.png"/>
+                   </div>
+               </div>
+                <!-- Registration form
+                 -->
+                 <div id="legend">
+                <h3 class="text-center" class="subhead">Administrator login</h3>
+                </div>
+                <!--username-->
+                <div id="feilds">
+                <div class="form-group">
+                      <label class="col-md-4 control-label" for="uname">Username</label>
+                    <div class="col-md-3">
+                        <input required type="text" name="uname" id="UNAME" class ="form-control input-md" />
+                          
+                    </div>
+                </div>
+
+                <!-- password-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="pwd" >Password</label>
+                    <div class="col-md-3">
+                       <input required type="password" name="pwd" id="Password" class ="form-control input-md"/>
+                    </div><br>
+                  <input type="submit" value = "log in" class="pull-left btn btn-default" >
+                </div>
+                        </div>
+                        </div>
+                </div>
+                
+            </fieldset>
+        </form>
+    </div>
+</body>

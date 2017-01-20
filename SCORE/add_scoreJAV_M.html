@@ -1,0 +1,92 @@
+<!doctype html>
+
+<<<<<<< HEAD
+<head>
+    <title>Amrita sports 2015 registration</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../js/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="../js/bootstrap-theme.min.css">
+  
+     <!-- Custom styles -->
+     <link rel="stylesheet" href="../css/reg_form.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+   <style>
+     #score{
+     margin: 0 auto;
+     width:960px;
+     }
+    </style>
+    <div class="form_wrap" id="reg_form">
+        <form class="form-horizontal" action = "add_scoreJAV_M_handler.php" method = "post" name="form" onsubmit="return check_form();">
+            <fieldset>
+             <!--header section-->
+               <div class="header" class="row">
+                   <div class="col-md-12" id="head-content">
+                       <img src="../images/header.png"/>
+                   </div>
+               </div>
+                <!-- Registration form
+                 -->
+                 <div id="legend">
+                <h3 class="text-center" class="subhead"> JAVELIN THROUGH (MALE) </h3>
+                </div>
+                <!--Name-->
+                <div class="row" id="score">
+                <div class="col-md-12">
+                <div class="form-group">
+                   <form method = "post" action = "add_hscore_100M_handler.php">
+			<table class="table">
+	<body>
+<!--		<form method = "post" action = "add_hscore_100M_handler.php"> -->
+				<tr>
+					<th> POS </th>
+					<th> Chest Number </th>
+					<th> Distance </th>
+				</tr>
+				<tr>
+					<td class="success ">Pos 1 </td>
+					<td> <input type="text" name = "pos1_chest" class="form-control"> </td>
+					<td> <input type="text" name = "pos1_score" class="form-control"> </td>
+				</tr>
+				<tr>
+					<td class="active"> Pos 2 </td>
+					<td> <input type="text" name = "pos2_chest" class="form-control"> </td>
+					<td> <input type="text" name = "pos2_score" class="form-control"> </td>
+				</tr>		
+				<tr>
+					<td class="warning"> Pos 3 </td>
+					<td> <input type="text" name = "pos3_chest" class="form-control"> </td>
+					<td> <input type="text" name = "pos3_score" class="form-control"> </td>
+				</tr>				
+				<tr>
+					<td class="warning"> Pos 4 </td>
+					<td> <input type="text" name = "pos4_chest" class="form-control"> </td>
+					<td> <input type="text" name = "pos4_score" class="form-control"> </td>
+				</tr>
+				<tr>
+					<td class="warning"> Pos 5 </td>
+					<td> <input type="text" name = "pos5_chest" class="form-control"> </td>
+					<td> <input type="text" name = "pos5_score" class="form-control"> </td>
+				</tr>
+			</table>
+			
+			<input type =  "submit" class="pull-right btn btn-default ">
+<!--		</form> -->
+                </div>
+
+                
+                       </div>
+                       </div>
+                        </div>
+                </div>
+                
+            </fieldset>
+        </form>
+    </div>
+</body>

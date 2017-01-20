@@ -1,0 +1,56 @@
+<html>
+<head>
+    <script>
+        function change() {
+        var select = document.getElementById("#session1_list");
+        var divv = document.getElementById("container");
+        var value = select.value;
+        if (value == 5) {
+            toAppend = "<input type='textbox' >&nbsp;<input type='textbox' >&nbsp;<input type='textbox' >&nbsp;<input type='textbox' >&nbsp;<input type='textbox' >"; divv.innerHTML=toAppend;  return;
+            }
+            if (value == 6) {
+                toAppend = "<input type='textbox' >&nbsp;<input type='textbox' >&nbsp;<input type='textbox' >&nbsp;<input type='textbox' >&nbsp;<input type='textbox' >&nbsp;<input type='textbox' >";divv.innerHTML = toAppend;  return;
+            }
+            if (value = 3) {
+                toAppend = "<input type='textbox' >&nbsp;<input type='textbox' >&nbsp;<input type='textbox' ><input type='textbox' >&nbsp;<input type='textbox' >&nbsp;<input type='textbox' >&nbsp;<input type='textbox' >";divv.innerHTML = toAppend;  return;
+
+            }
+     }
+    </script>
+    </head>
+    <body>
+        <center>
+        <h1>Select Events </h1><br>
+            
+        
+ganamela :<input type="checkbox"> 
+ select no of members : <select id="#session1_list" onchange="change();">
+            <option value="5"> 5 </option>
+            <option value="6"> 6 </option>
+            <option value="7"> 7 </option>
+            </select>
+ <div id="container"></div>
+ </center>
+        <script>
+        $('#session1').change(function(){
+   $('#session1_list').toggle('show');
+});
+
+$('#submit').click(function(){
+    if($('#session1').is(':checked'))
+    {
+        if($('#session1_list').val().length < 1)
+        {
+            alert('Please select a course');
+            return false;
+        } 
+    } 
+    
+    alert('form posted ok');
+});
+                                                
+     </script>                                           
+        
+    
+ </body>
+ </html>
