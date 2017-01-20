@@ -16,7 +16,7 @@ function chestnum(){
   }
 
   //selecting all chest number unallotted students
-  $query = 'SELECT * FROM student WHERE CHEST = 0';
+  $query = 'SELECT * FROM STUDENT WHERE CHEST = 0';
   $result = mysqli_query($conn, $query);
 
   //selecting all departments' max chest number
