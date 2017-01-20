@@ -69,6 +69,7 @@ if (!$conn) {
             <fieldset>
              <!--header section-->
                <div class="header" class="row">
+                 <center>  <a class="pull-left" href="index.html"><img src="img/header.png" alt="Home" class="logo"> </center> &lArr; BACK HOME</a>
                    <div class="col-md-12" id="head-content">
                         <a href=index.html><img src="images/header.png"/></a>
                    </div>

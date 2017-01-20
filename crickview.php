@@ -67,11 +67,14 @@ if (!$conn) {
         </script>
 </head>
 <body>
+
     <div class="form_wrap" id="reg_form">
+
         <form class="form-horizontal" action = "after_reg.php" method = "post" name="form" onsubmit="return check_form();">
             <fieldset>
              <!--header section-->
                <div class="header" class="row">
+								 <center>  <a class="pull-left" href="index.html"><img src="img/header.png" alt="Home" class="logo"> </center> &lArr; BACK HOME</a>
                   <center> <div id="head-content">
                         <a href=index.html><img src="images/header.png"/></a>
                    </div></center>
