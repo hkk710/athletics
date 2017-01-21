@@ -6,7 +6,7 @@ function chestnum(){
   $username = "athletics";
   $password = "amrita_108";
   $dbname = "athletics";
-
+  static $max;
   // Create connection
   $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -27,26 +27,27 @@ function chestnum(){
   while($row = mysqli_fetch_assoc($result)){
     $batch = $row['batch'];
     $roll =  $row['roll'];
+    $mail12 = $row['email'];
+    $user1 = $row['name'];
     $q = "SELECT MAX(`CHEST`) FROM `STUDENT` WHERE `batch`='$batch'";
     //$q = "SELECT MAX(CHEST) WHERE batch = $batch";
     $allmax = mysqli_query($conn, $q);
 
     while($rowm = mysqli_fetch_assoc($allmax))
    	 {
-   		 echo $max=$rowm['MAX(`CHEST`)'];
+   		  $max=$rowm['MAX(`CHEST`)'];
    	 }
-   	 //echo $cse = $bcr;echo $csa = $bcr;echo $me = $bcr; echo $ece = $bcr;echo $eee = $bcr;
-
 /*
   CHEST NUMBER ALLOCATION INFO
   //100-250mech, 251-400ec, 401-550eee, 551-700cse, 701-850csa
 */
-
     //Checking for the department and setting chest number
     if($batch==1 && $max==0){
       $q = "UPDATE student SET CHEST = 100 WHERE roll LIKE '$roll'";
+      $max = 100;
     } else if($batch==1 && $max == 250) {
       $q = "UPDATE student SET CHEST = 900 WHERE roll LIKE '$roll'";
+      $max = 900;
     } else if($batch==1){
       $max++;
       $q = "UPDATE student SET CHEST = $max WHERE roll LIKE '$roll'";
@@ -54,8 +55,10 @@ function chestnum(){
 
     if($batch==2 && $max==0){
       $q = "UPDATE student SET CHEST = 251 WHERE roll LIKE '$roll'";
+      $max = 251;
     } else if($batch==2 && $max == 400) {
       $q = "UPDATE student SET CHEST = 1000 WHERE roll LIKE '$roll'";
+      $max = 1000;
     } else if($batch==2) {
       $max++;
       $q = "UPDATE student SET CHEST = $max WHERE roll LIKE '$roll'";
@@ -63,8 +66,10 @@ function chestnum(){
 
     if($batch==3 && $max==0){
       $q = "UPDATE student SET CHEST = 401 WHERE roll LIKE '$roll'";
+      $max = 401;
     }  else if($batch==3 && $max == 550) {
       $q = "UPDATE student SET CHEST = 1100 WHERE roll LIKE '$roll'";
+      $max = 1100;
     } else if($batch==3) {
       $max++;
       $q = "UPDATE student SET CHEST = $max WHERE roll LIKE '$roll'";
@@ -72,8 +77,10 @@ function chestnum(){
 
     if($batch==4 && $max==0){
       $q = "UPDATE student SET CHEST = 551 WHERE roll LIKE '$roll'";
+      $max = 551;
     } else if($batch==4 && $max == 700) {
       $q = "UPDATE student SET CHEST = 1200 WHERE roll LIKE '$roll'";
+      $max = 1200;
     } else if($batch==4) {
       $max++;
       $q = "UPDATE student SET CHEST = $max WHERE roll LIKE '$roll'";
@@ -81,73 +88,69 @@ function chestnum(){
 
     if($batch==5 && $max==0){
       $q = "UPDATE student SET CHEST = 701 WHERE roll LIKE '$roll'";
+      $max = 701;
     } else if($batch==5 && $max == 850) {
       $q = "UPDATE student SET CHEST = 1300 WHERE roll LIKE '$roll'";
+      $max = 1300;
     } else if($batch==5) {
       $max++;
       $q = "UPDATE student SET CHEST = $max WHERE roll LIKE '$roll'";
     }
 
     //assigning the chest number
+    mysqli_query($conn, $q);
+
     $res = mysqli_query($conn, $q);
 
     //sending email
 
-    $dupnameerror=1062;
+    if ($res) {
 
-    if($res){
+  require("PHPMailer-master/PHPMailerAutoload.php");
 
-      require("PHPMailerAutoload.php");
+  /////////////////Email to participant
 
-      $mail = new PHPMailer();
+  $mail = new PHPMailer(true);
 
-      $mail->IsSMTP();                                      // set mailer to use SMTP
-      $mail->Host = "smtp.sendgrid.net";  // specify main and backup server
-      $mail->SMTPAuth = true;     // turn on SMTP authentication
-      $mail->Username = "Darkwolf";  // SMTP username
-      $mail->Password = "vasudev123"; // SMTP password
+  $mail->IsSMTP();                                      // set mailer to use SMTP
+  $mail->Host = "smtp.sendgrid.net";  // specify main and backup server
+  $mail->Port = 25;
+  $mail->SMTPAuth = true;     // turn on SMTP authentication
+  $mail->Username = "apikey";  // SMTP username
+  $mail->Password = "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"; // SMTP password
+  //$mail->SMTPDebug = 3; Uncomment to enable error_reporting in mail
+  $mail->From = "arjunnmisme@gmail.com";
+  $mail->FromName = "Department of Physical Education";
+  $mail->AddAddress($mail12, $user1);
+  $mail->AddReplyTo("arjunnmisme@gmail.com", "Information");
 
-      $mail->From = "from@example.com";
-      $mail->FromName = "Mailer";
-      $mail->AddAddress($mail12, $user1);
-      $mail->AddAddress("ellen@example.com");                  // name is optional
-      $mail->AddReplyTo("info@example.com", "Information");
+  $mail->WordWrap = 50;                                // set word wrap to 50 characters
+  //$mail->AddAttachment("/var/tmp/file.tar.gz");         // add attachments
+  //$mail->AddAttachment("/tmp/image.jpg", "new.jpg");    // optional name
+  $mail->IsHTML(true);                                  // set email format to HTML
+  $mail->Subject = "Annual Athletic Meet 2016-2017";
+  $mail->Body    = "Dear $user1,"."<br/>
+      Greetings from Amrita University & Congratulations for registering for Annual Athletic Meet 2016-2017!<br/><br/>".
+  "<center><b>Your chest number is</b>".$max."</center><br><br>We wish you all the very best!";
+  $mail->AltBody = "Greetings from Amrita University & Congratulations for registering for Annual Athletic Meet 2016-2017!<br/><br/>".
+  "<center><b>Your chest number is</b>".$max."</center><br><br>We wish you all the very best!";
 
-      $mail->WordWrap = 50;                                 // set word wrap to 50 characters
-      //$mail->AddAttachment("/var/tmp/file.tar.gz");         // add attachments
-      //$mail->AddAttachment("/tmp/image.jpg", "new.jpg");    // optional name
-      $mail->IsHTML(true);                                  // set email format to HTML
+  if(!$mail->Send())
+  {
+     echo "Message could not be sent. <p>";
+     echo "Mailer Error: " . $mail->ErrorInfo;
+     exit;
+  }
 
-      $mail->Subject = "Here is the subject";
-      $mail->Body    = "This is your chest number:</b>".$max;
-      $mail->AltBody = "This is the body in plain text for non-HTML mail clients";
-
-      if(!$mail->Send())
-      {
-         echo "Message could not be sent. <p>";
-         echo "Mailer Error: " . $mail->ErrorInfo;
-         exit;
-      }
-
-      echo "Message has been sent";
-
-      	}
-
-
-      	// could not insert
-      	else {
-      		if (mysqli_errno($conn) == $dupnameerror)
-      		{
-      			print 'User already exists';
-      		}
-      		else
-      		{
-      			//echo "User could not be added to the database. Reason: " . mysql_error();
-      			echo "Something went wrong";
-      		}
-    }
+  echo "<h4 style='color:white'><center>Chest number has been sent to your email</center></h4>";
 
   }
-}
+  	// could not insert
+  else {
+  	   echo "User could not be added to the database. Reason: " . mysqli_error($conn);
+  		echo "Something went wrong";
+  }
 
+}
+}
 ?>
