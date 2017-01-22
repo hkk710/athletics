@@ -15,12 +15,12 @@ function chestnum(){
       die("Connection failed: " . mysqli_connect_error());
   }
 
-  //selecting all chest number unallotted students
-  $query = 'SELECT * FROM student WHERE CHEST = 0';
+  //selecting all chest number unallotted STUDENTs
+  $query = 'SELECT * FROM STUDENT WHERE CHEST = 0';
   $result = mysqli_query($conn, $query);
 
   //selecting all departments' max chest number
-  //$query = 'SELECT MAX(CHEST) FROM student GROUP BY batch';
+  //$query = 'SELECT MAX(CHEST) FROM STUDENT GROUP BY batch';
   //$max = mysqli_query($conn, $query);
 
 
@@ -43,58 +43,58 @@ function chestnum(){
 */
     //Checking for the department and setting chest number
     if($batch==1 && $max==0){
-      $q = "UPDATE student SET CHEST = 100 WHERE roll LIKE '$roll'";
+      $q = "UPDATE STUDENT SET CHEST = 100 WHERE roll LIKE '$roll'";
       $max = 100;
     } else if($batch==1 && $max == 250) {
-      $q = "UPDATE student SET CHEST = 900 WHERE roll LIKE '$roll'";
+      $q = "UPDATE STUDENT SET CHEST = 900 WHERE roll LIKE '$roll'";
       $max = 900;
     } else if($batch==1){
       $max++;
-      $q = "UPDATE student SET CHEST = $max WHERE roll LIKE '$roll'";
+      $q = "UPDATE STUDENT SET CHEST = $max WHERE roll LIKE '$roll'";
     }
 
     if($batch==2 && $max==0){
-      $q = "UPDATE student SET CHEST = 251 WHERE roll LIKE '$roll'";
+      $q = "UPDATE STUDENT SET CHEST = 251 WHERE roll LIKE '$roll'";
       $max = 251;
     } else if($batch==2 && $max == 400) {
-      $q = "UPDATE student SET CHEST = 1000 WHERE roll LIKE '$roll'";
+      $q = "UPDATE STUDENT SET CHEST = 1000 WHERE roll LIKE '$roll'";
       $max = 1000;
     } else if($batch==2) {
       $max++;
-      $q = "UPDATE student SET CHEST = $max WHERE roll LIKE '$roll'";
+      $q = "UPDATE STUDENT SET CHEST = $max WHERE roll LIKE '$roll'";
     }
 
     if($batch==3 && $max==0){
-      $q = "UPDATE student SET CHEST = 401 WHERE roll LIKE '$roll'";
+      $q = "UPDATE STUDENT SET CHEST = 401 WHERE roll LIKE '$roll'";
       $max = 401;
     }  else if($batch==3 && $max == 550) {
-      $q = "UPDATE student SET CHEST = 1100 WHERE roll LIKE '$roll'";
+      $q = "UPDATE STUDENT SET CHEST = 1100 WHERE roll LIKE '$roll'";
       $max = 1100;
     } else if($batch==3) {
       $max++;
-      $q = "UPDATE student SET CHEST = $max WHERE roll LIKE '$roll'";
+      $q = "UPDATE STUDENT SET CHEST = $max WHERE roll LIKE '$roll'";
     }
 
     if($batch==4 && $max==0){
-      $q = "UPDATE student SET CHEST = 551 WHERE roll LIKE '$roll'";
+      $q = "UPDATE STUDENT SET CHEST = 551 WHERE roll LIKE '$roll'";
       $max = 551;
     } else if($batch==4 && $max == 700) {
-      $q = "UPDATE student SET CHEST = 1200 WHERE roll LIKE '$roll'";
+      $q = "UPDATE STUDENT SET CHEST = 1200 WHERE roll LIKE '$roll'";
       $max = 1200;
     } else if($batch==4) {
       $max++;
-      $q = "UPDATE student SET CHEST = $max WHERE roll LIKE '$roll'";
+      $q = "UPDATE STUDENT SET CHEST = $max WHERE roll LIKE '$roll'";
     }
 
     if($batch==5 && $max==0){
-      $q = "UPDATE student SET CHEST = 701 WHERE roll LIKE '$roll'";
+      $q = "UPDATE STUDENT SET CHEST = 701 WHERE roll LIKE '$roll'";
       $max = 701;
     } else if($batch==5 && $max == 850) {
-      $q = "UPDATE student SET CHEST = 1300 WHERE roll LIKE '$roll'";
+      $q = "UPDATE STUDENT SET CHEST = 1300 WHERE roll LIKE '$roll'";
       $max = 1300;
     } else if($batch==5) {
       $max++;
-      $q = "UPDATE student SET CHEST = $max WHERE roll LIKE '$roll'";
+      $q = "UPDATE STUDENT SET CHEST = $max WHERE roll LIKE '$roll'";
     }
 
     //assigning the chest number
