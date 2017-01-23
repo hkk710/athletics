@@ -526,7 +526,38 @@ $result = mysqli_query($conn, $sql_m101);
 				}
 			?>
 			</table>
+<table class="table table-striped table-bordered table-hover">
 
+	<h2> 100 m Hurdles FEMALE </h2>
+	<tr>
+			<th> S.No </th>
+					   <th>Name</th>
+					   <th>Chest No:</th>
+					   <th>Roll no</th>
+
+					</tr>
+			<?php
+			$sql_m101 = "SELECT  `STUDENT`.`name` ,  `STUDENT`.`roll` ,  `STUDENT`.`CHEST` ,  `STUDENT`.`batch`
+	FROM  `STUDENT` WHERE `EVENT_1` = 213 OR `EVENT_2` = 213 OR `EVENT_3` = 213 order by `STUDENT`.`batch`";
+
+	$result = mysqli_query($conn, $sql_m101);
+
+			$sno = 1;
+				if (mysqli_num_rows($result) > 0) {
+					// output data of each row
+				 //   echo "<br> 100 m MALE <br>";
+					while($row = mysqli_fetch_assoc($result)) {
+						echo "<tr>";
+						echo "<td>" . $sno++. "</td>"."<td>" . $row["name"] . "</td>" ."<td>" . $row["CHEST"] . "</td>" . "<td>". $row["roll"] . "</td>"  ;
+						echo "</tr>";
+
+					//    echo "Name: " . $row["name"]. " - Name: " . $row["roll"]. " " . $bth. "<br>";
+					}
+				} else {
+					echo "0 results";
+				}
+			?>
+			</table>
 	<table class="table table-striped table-bordered table-hover">
 
 	<h2> 400 m Hurdles MALE </h2>

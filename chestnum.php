@@ -15,12 +15,12 @@ function chestnum(){
       die("Connection failed: " . mysqli_connect_error());
   }
 
-  //selecting all chest number unallotted students
+  //selecting all chest number unallotted STUDENTs
   $query = 'SELECT * FROM STUDENT WHERE CHEST = 0';
   $result = mysqli_query($conn, $query);
 
   //selecting all departments' max chest number
-  //$query = 'SELECT MAX(CHEST) FROM student GROUP BY batch';
+  //$query = 'SELECT MAX(CHEST) FROM STUDENT GROUP BY batch';
   //$max = mysqli_query($conn, $query);
 
 
@@ -46,7 +46,7 @@ function chestnum(){
       $q = "UPDATE STUDENT SET CHEST = 100 WHERE roll LIKE '$roll'";
       $max = 100;
     } else if($batch==1 && $max == 250) {
-      $q = "UPDATE student SET CHEST = 900 WHERE roll LIKE '$roll'";
+      $q = "UPDATE STUDENT SET CHEST = 900 WHERE roll LIKE '$roll'";
       $max = 900;
     } else if($batch==1){
       $max++;
