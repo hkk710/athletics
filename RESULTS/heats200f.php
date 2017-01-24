@@ -1,68 +1,80 @@
-<?php
+<!doctype html>
 
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "athletics";
-$score=0;
-	// Create connection
-	//$conn = mysqli_connect($servername, $username, $password, $dbname);
-	$conn = mysqli_connect($servername, $username, $password, $dbname);
+<head>
+    <title>Amrita sports 2015 registration</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../js/bootstrap.min.css">
 
-		echo "done1";
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="../js/bootstrap-theme.min.css">
+  
+     <!-- Custom styles -->
+     <link rel="stylesheet" href="../css/reg_form.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+   <script src="../js/reg_form.min.js"></script>
+   <script>
+       function check_form(){
+        var email = $("#email").val();
+        var phone = $("#student_phone").val();
+        
+        var ck_phone = /^[0]?[789]\d{9}$/
+        var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+           
+        if (!ck_phone.test(phone)){
+          $("#student_phone").css("border","2px solid #6e1d2c");
+            return false;
+        }
+     
+        if (!ck_email.test(email)){
+          $("#email").css("border","2px solid #6e1d2c");
+            return false;
+        }
+        
+        else{
+         return true;
+        }
+       } 
+        </script>
+</head>
+
+<body>
+    <div class="form_wrap" id="reg_form">
+        <form  action = "../entry/heat200f.php" method = "post" name="form">
+            <fieldset>
+             <!--header section-->
+               <div class="header" class="row">
+                   <div class="col-md-12" id="head-content">
+                        <a href=index.html><img src="../images/header.png"/></a>
+                   </div>
+               </div>
+                <!-- Result Entry
+                 -->
+                 <div id="legend">
+                <h3 class="text-center" class="subhead">Result Entry : 200m FEMALE HEATS </h3>
+                </div>
+
+				<br><br><center><B>Position 1&nbsp;<input id="chest1" name="chest_no1" type="text" placeholder="enter chest number" required="">
+				Time&nbsp;<input name="time_no1" type="text" placeholder="enter time " required=""><br>
+				Position 2&nbsp;<input id="chest2" name="chest_no2" type="text" placeholder="enter chest number" required="">
+				Time&nbsp;<input name="time_no2" type="text" placeholder="enter time" required=""><br>
+				Position 3&nbsp;<input id="chest1" name="chest_no3" type="text" placeholder="enter chest number" required="">
+				Time&nbsp;<input name="time_no3" type="text" placeholder="enter time " required=""><br>
 
 
-	$chest1 = $_POST["chest_no1"];
-	$chest2 = $_POST["chest_no2"];
-	$chest3 = $_POST["chest_no3"];
 
-	$dist1 = $_POST["time_no1"];
-	$dist2 = $_POST["time_no2"];
-	$dist3 = $_POST["time_no3"];
+				
+				</center>
 
-	$insert1_query = "INSERT INTO `athletics`.`result_200F`(`chest`, `time`) VALUES ('$chest1','$dist1')";
-	$insert2_query = "INSERT INTO `athletics`.`result_200F`(`chest`, `time`) VALUES ('$chest2','$dist2')";
-	$insert3_query = "INSERT INTO `athletics`.`result_200F`(`chest`, `time`) VALUES ('$chest3','$dist3')";
-
-	$insert1 = mysqli_query($conn, $insert1_query);
-	$insert2 = mysqli_query($conn, $insert2_query);
-	$insert3 = mysqli_query($conn, $insert3_query);
-
-	$score1 = "SELECT SCORE FROM student WHERE CHEST = $chest1";
-	$result1 = mysqli_query($conn, $score1);
-
-	while($row = mysqli_fetch_assoc($result1))
-	{
-
-		$score1 = $row["SCORE"];
-		$score1 = $score1+5;
-	}
-	$score2 = "SELECT SCORE FROM student WHERE CHEST = $chest2";
-	$result2 = mysqli_query($conn, $score2);
-	while($row = mysqli_fetch_assoc($result2))
-	{
-
-		$score2 = $row["SCORE"];
-		$score2 = $score2+3;
-	}
-	$score3 = "SELECT SCORE FROM student WHERE CHEST = $chest3";
-	$result3 = mysqli_query($conn, $score3);
-	while($row = mysqli_fetch_assoc($result3))
-	{
-
-		$score3 = $row["SCORE"];
-		$score3 = $score3+2;
-	}
-
-	$update1_query = "UPDATE `athletics`.`student` SET `SCORE` = $score1 WHERE `CHEST` = $chest1";
-	$qry=mysqli_query($conn, $update1_query);
-$update2_query = "UPDATE `athletics`.`student` SET `SCORE` = $score2 WHERE `CHEST` = $chest2";
-	$qry=mysqli_query($conn, $update2_query);
-$update3_query = "UPDATE `athletics`.`student` SET `SCORE` = $score3 WHERE `CHEST` = $chest3";
-	$qry=mysqli_query($conn, $update3_query);
-
-
-	mysqli_close($conn);
-		header("Location:../RESULTS/");
-
-?>
+				
+                
+                                                           <input type="submit" value = "Enter" class="pull-right btn btn-default clear">
+                        </div>
+                        </div>
+                </div>
+                
+            </fieldset>
+        </form>
+    </div>
+</body>
