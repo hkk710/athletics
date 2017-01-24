@@ -3,8 +3,8 @@
 /*
 $servername = "localhost";
 $username = "root";
-$password = "password";
-$dbname = "sports_db";
+$password = "";
+$dbname = "athletics";
 */
 
 	$servername = "localhost";
@@ -21,7 +21,7 @@ if (!$conn) {
 }
 ?>
 <head>
-    <title>Amrita sports 2016 registration</title>
+    <title>Amrita sports 2017 registration</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="../js/bootstrap.min.css">
 
@@ -42,24 +42,24 @@ if (!$conn) {
        function check_form(){
         var email = $("#email").val();
         var phone = $("#student_phone").val();
-        
+
         var ck_phone = /^[0]?[789]\d{9}$/
         var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
-           
+
         if (!ck_phone.test(phone)){
           $("#student_phone").css("border","2px solid #6e1d2c");
             return false;
         }
-     
+
         if (!ck_email.test(email)){
           $("#email").css("border","2px solid #6e1d2c");
             return false;
         }
-        
+
         else{
          return true;
         }
-       } 
+       }
         </script>
 </head>
 
@@ -88,7 +88,7 @@ if (!$conn) {
                     <tr>
                        <th>Name</th>
                        <th>Roll no</th>
-                       <th>Batch</th> 
+                       <th>Batch</th>
                     </tr>
                     <tr>
                         <td>content</td>
@@ -97,10 +97,10 @@ if (!$conn) {
                     </tr>
                 </table>
                 -->
-                
+
 <table class="table table-striped table-bordered table-hover">
 
-	<h2> Batch 1 / Commerce </h2>
+	<h2><b> Computer Science Engineering</h2>
 <br>
 <center><input type="button" onClick="print()" value="print"></center>
 <br>
@@ -110,12 +110,12 @@ if (!$conn) {
 				<th>CHEST</th>
                        <th>Name</th>
                        <th>Roll No</th>
-                       <th>Batch</th> 
+                    <!--   <th>Batch</th>-->
                     </tr>
 			<?php
-			$sql_m101 = "SELECT `STUDENT`.`name` , `STUDENT`.`CHEST` , `STUDENT`.`roll` , `STUDENT`.`batch`
+			$sql_m101 = "SELECT `STUDENT`.`name` , `STUDENT`.`CHEST` , `STUDENT`.`roll`
 FROM `STUDENT`
-WHERE `STUDENT`.`CHEST` BETWEEN 507 AND 599  ORDER BY `STUDENT`.`name`";
+WHERE `STUDENT`.`CHEST` BETWEEN 551 AND 700  ORDER BY `STUDENT`.`name`";
 $result = mysqli_query($conn, $sql_m101);
 
 			$sno = 1;
@@ -124,26 +124,26 @@ $result = mysqli_query($conn, $sql_m101);
 				 //   echo "<br> 100 m MALE <br>";
 				    while($row = mysqli_fetch_assoc($result)) {
 				    	echo "<tr>";
-				    	echo "<td>" . $sno++. "</td>"."<td>" . $row["CHEST"]. "</td>"."<td>" . $row["name"] . "</td>" . "<td>". $row["roll"] . "</td>". "<td>". $row["batch"] . "</td>";
+				    	echo "<td>" . $sno++. "</td>"."<td>" . $row["CHEST"]. "</td>"."<td>" . $row["name"] . "</td>" . "<td>". $row["roll"] . "</td>";
 				    	echo "</tr>";
-				    
+
 				    //    echo "Name: " . $row["name"]. " - Name: " . $row["roll"]. " " . $row["batch"]. "<br>";
 				    }
 				} else {
 				    echo "0 results";
-				}	
+				}
 			?>
 			</table>
 
-		
-			
+
+
 <!-- -->
                 </div>
                 </div>
             </div>
                         </div>
                 </div>
-                
+
             </fieldset>
         </form>
     </div>

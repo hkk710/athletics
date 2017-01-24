@@ -8,7 +8,7 @@
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css" type="text/css">
-    
+
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -25,18 +25,18 @@ margin-bottom:10px;
  margin:300px;
 }
     body{
-        
-        
-        
+
+
+
     }
     .button{
-        
-        
+
+
         align-self: middle;
         background-color: ;
     }
-    
-       
+
+
 </style>
 </head>
     <body>
@@ -53,32 +53,35 @@ margin-bottom:10px;
                </div>
     <CENTER>
 
-         
-  
+
+
 
 
             <br><br>
-            <a href="class/cse.php"><font color="#6e1d2c">Commerce / Batch 1</font></a>          
+            <a href="class/mech.php"><font color="#23527c"></font><b>Mechanical Engineering</a>
+          <br><br>
+            <a href="class/cse.php"><font color="#23527c"><b>Computer Science Engineering</font></a>
 <br><Br>
-  <a href="class/csa.php"><font color="#6e1d2c">BBM and MSW / Batch 2 </font></a>  
-<Br><br>              <a href="class/mech.php"><font color="#6e1d2c">Arts and Sciences / Batch 3</font></a>             
-<br><br>   
-                
+  <a href="class/csa.php"><font color="#23527c"><b>Computer Science and Application</font></a>
+<br><br>
+<a href="class/eee.php"><font color="#23527c"></font><b>Electical and Electronic Engineering</a>
+<br><br>
+<a href="class/ece.php"><font color="#23527c"></font><b>Electronics and Communication Engineering </a>
+<br><br>
 
-            
-           
-        </ul> 
-        
 
-  
+
+
+        </ul>
+
+
+
 
         </div>
 
 
             </CENTER>
-    
-    
+
+
     </BODY>
 </HTML>
-
-
