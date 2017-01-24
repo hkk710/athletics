@@ -1,6 +1,6 @@
 <?php
 
-$cot=mysqli_connect("localhost","root","","athletics");
+$cot=mysqli_connect("localhost","athletics","amrita_108","athletics");
 
 $querya="UPDATE `DEPTSCORE` SET `SCORE`=(SELECT SUM(`STUDENT`.`SCORE`) FROM `STUDENT` WHERE  `batch`='1') WHERE  `DEPT`='1'";
 $queryb="UPDATE `DEPTSCORE` SET `SCORE`=(SELECT SUM(`STUDENT`.`SCORE`) FROM `STUDENT` WHERE  `batch`='2') WHERE  `DEPT`='2'";
