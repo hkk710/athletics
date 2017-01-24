@@ -20,9 +20,9 @@ $score=0;
 	$dist2 = $_POST["time_no2"];
 	$dist3 = $_POST["time_no3"];
 
-	$insert1_query = "INSERT INTO `athletics`.`result_javF`(`chest`, `time`) VALUES ('$chest1','$dist1')";
-	$insert2_query = "INSERT INTO `athletics`.`result_javF`(`chest`, `time`) VALUES ('$chest2','$dist2')";
-	$insert3_query = "INSERT INTO `athletics`.`result_javF`(`chest`, `time`) VALUES ('$chest3','$dist3')";
+	$insert1_query = "INSERT INTO `athletics`.`result_hur100F`(`chest`, `time`) VALUES ('$chest1','$dist1')";
+	$insert2_query = "INSERT INTO `athletics`.`result_hur100F`(`chest`, `time`) VALUES ('$chest2','$dist2')";
+	$insert3_query = "INSERT INTO `athletics`.`result_hur100F`(`chest`, `time`) VALUES ('$chest3','$dist3')";
 
 	$insert1 = mysqli_query($conn, $insert1_query);
 	$insert2 = mysqli_query($conn, $insert2_query);
